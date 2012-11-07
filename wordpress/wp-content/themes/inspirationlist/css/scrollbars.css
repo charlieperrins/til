@@ -1,0 +1,26 @@
+/*
+ 	----------------------------------------------------------------------------------
+		CUSTOM SCROLLBARS
+	----------------------------------------------------------------------------------
+*/
+
+::-webkit-scrollbar { width: 13px; height: 13px; background: #b8b8b8;}
+
+::-moz-scrollbar { width: 13px; height: 13px; background: #b8b8b8;}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+height: 15px; width: 13px; display: block; background: #b8b8b8; background-repeat: no-repeat; }
+
+::-webkit-scrollbar-button:vertical:decrement { background: url(../img/ui-sprite.png) no-repeat -254px -63px; }
+
+::-webkit-scrollbar-button:vertical:increment { background: url(../img/ui-sprite.png) no-repeat -254px -86px; }
+
+::-webkit-scrollbar-track-piece { background-color: #cdcdcd; }
+
+::-webkit-scrollbar-thumb:vertical { height: 50px; background: #b8b8b8; }
+
+
+.about ::-webkit-scrollbar,
+.about ::-webkit-scrollbar-thumb:vertical { background-color: #414141; }
+.about ::-webkit-scrollbar-track-piece { background-color: #363636; }
