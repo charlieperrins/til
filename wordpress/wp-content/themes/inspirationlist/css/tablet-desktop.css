@@ -1,0 +1,347 @@
+@media screen and (min-width : 621px) {
+	/* Bigger screens - iPads and up */
+
+
+/*
+ 	----------------------------------------------------------------------------------
+		LEFT NAV / 'HEADER' STRUCTURE
+	----------------------------------------------------------------------------------
+*/
+
+div.main	{
+	margin-left: 200px;
+	padding: 0 0 33px 0;
+}
+
+.page-header	{
+	background: #000;
+	color: #fff;
+	position: fixed;
+	width: 166px;
+	padding: 12px 17px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.page-header h1	{
+	margin: 0 0 4px 0;
+	padding: 0;
+	width: 162px;
+	height: 85px;
+}
+
+.page-header h1 a	{
+	display: block;
+	background: url('../img/ui-sprite.png') no-repeat -10px -15px;
+	width: 162px;
+	height: 85px;
+}
+
+.strapline	{
+	color: #818080;
+	font-style: italic;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 36px 0;
+}
+
+.page-header a	{
+	color: #fff;
+}
+.page-header a:hover	{
+	color: #42cebc;
+}
+
+.nav-section	{
+	border-top: 4px solid #fff;
+}
+
+.nav-section ul	{
+	margin: 0;
+	padding: 18px 0;
+	list-style: none;
+	font-weight: bold;
+}
+
+.nav-section ul li	{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.nav-section ul li a	{
+	display: block;
+	text-decoration: none;
+	position: relative;
+}
+
+.nav-section ul li a:hover,
+.nav-section ul li.current-cat a,
+.nav-section ul li.current-cat a:hover	{
+	color: #42cebc;
+}
+
+.nav-section ul li a:hover:after,
+.nav-section ul li.current-cat a:after,
+.nav-section ul li.current-cat a:hover:after	{
+	content: '';
+	display: block;
+	width: 4px;
+	height: 11px;
+	background: #42cebc;
+	position: absolute;
+	top: 5px;
+	right: 0;	
+}
+
+input.search	{
+	width: 166px;
+	padding: 0;
+	color: #666;
+	background: #000;
+	border: none;
+	border-bottom: 2px solid #666;
+	margin: 0 0 100px 0;
+	border-radius: 0;
+}
+
+input.search:focus	{
+	border-color: #42cebc;
+	color: #fff;
+	outline: none;
+}
+
+.nav-bottom	{
+	width: 166px;
+	overflow: hidden;
+	position: fixed;
+	bottom: 34px;
+}
+
+
+.page-header a.submit	{
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	color: #999;
+	border-top: 4px solid #fff;	
+	padding: 12px 0 0 16px;
+	text-decoration: none;
+	margin: 12px 0 0 0;
+	position: relative;
+}
+
+.page-header a.submit:after {
+	content: '';
+	display: block;
+	background: url('../img/ui-sprite.png') no-repeat -254px -15px;
+	width: 12px;
+	height: 12px;
+	position: absolute;
+	top: 15px;
+	left: 0;
+}
+
+.page-header a.submit:hover	{
+	color: #6bbeb3;
+}
+
+.addthis_toolbox, .fb-like	{
+	float: left;
+}
+
+.fb-like	{
+	margin: 0 0 0 20px;
+}
+
+.fb_edge_comment_widget	{
+	display: none !important;
+}
+
+.addthis_toolbox	{
+	background: transparent !important;
+	margin: -5px 0 0 76px;
+}
+
+
+/*
+ 	----------------------------------------------------------------------------------
+		EXPANDABLE TABS
+	----------------------------------------------------------------------------------
+*/
+
+.expandable-shim	{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 200px;
+	z-index: 2;
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.expandable-tab	{
+	display: block;
+	width: 42px;
+	height: 44px;	
+	color: #fff;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: -42px;	
+}
+
+.expandable-open	{
+	left: 200px !important;
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+
+.twitter, .about	{
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+
+.twitter	{
+	background: #42cebc;
+	color: #fff;
+	position: fixed;
+	left: 0;
+	top: 53px;
+	z-index: 3;
+	width: 200px;
+}
+
+.twitter:hover	{
+	left: 200px;
+}
+
+.twitter .expandable-tab	{
+	background: #42cebc url('../img/ui-sprite.png') no-repeat -193px -34px;
+}
+
+.twitter .twitter-content	{
+	width: 172px;
+	height: 30px;
+	padding: 7px 14px;	
+}
+
+.twitter .twitter-content a	{
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+
+.about	{
+	position: fixed;
+	left: -174px;
+	top: 0;
+	z-index: 5;
+	width: 374px;
+	color: #fff;
+	font-size: 0.9em;
+}
+
+.about section	{
+	margin-bottom: 50px;
+}
+
+.about .expandable-tab	{
+	margin: 7px 0 0 0;
+	background: #414141 url('../img/ui-sprite.png') no-repeat -207px 0;
+	-webkit-transition: all 50ms ease;
+	-moz-transition: all 50ms ease;
+	-ms-transition: all 50ms ease;
+	-o-transition: all 50ms ease;
+	transition: all 50ms ease;
+}
+
+.about:hover .expandable-tab	{
+	background-position: -206px 0;
+}
+
+.about .expandable-tab-active,
+.about:hover .expandable-tab-active	{
+	background: #414141 url('../img/ui-sprite.png') no-repeat -178px 0;
+}
+
+.about-content	{
+	float: left;
+	color: #fff;
+	background: #363636;
+	padding: 22px 12px;
+	width: 350px;
+	overflow: scroll;
+	overflow-x: hidden;
+/* 	height: 630px; */
+}
+
+.about a	{
+	color: #a4a4a4;
+}
+
+.about a:hover	{
+	color: #43cebc;
+}
+
+.about-content p	{
+	margin: 0;
+	padding: 0;
+}
+
+.about h2, .about h3	{
+	color: #43cebc;
+	font-size: 1em;
+	margin: 0 0 6px 0;
+}
+
+.about .founders p	{
+	font-weight: bold;
+}
+
+.about .founders .founder-name	{
+	display: inline-block;
+	width: 140px;
+	color: #fff;
+}
+
+
+.contributor	{
+	margin: 0 0 40px;
+}
+
+.contributor h4	{
+	margin: 0 0 8px 0;
+	font-size: 1.2em;
+}
+
+p.contrib-meta	{
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+.contrib-web	{
+
+}
+
+.contrib-twitter	{
+
+}
+
+.contrib-blurb	{
+
+}
+
+
+}
