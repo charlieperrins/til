@@ -56,10 +56,13 @@ jQuery('document').ready(function($){
 		
 	// Sort out height of about col on page load
 	// Will need to put in resize functions here in the future
-		
+
 	// Clicking on List items
 	$('.item>a').live('click', function(){
-		_gaq.push(['_trackEvent', 'List Items', 'Click', $(this).attr('title')]);
+				
+		showDetailView($(this));
+		return false;
+//		_gaq.push(['_trackEvent', 'List Items', 'Click', $(this).attr('title')]);
 	});
 	
 	$('.expandable-tab-click').click(function(){
@@ -67,6 +70,7 @@ jQuery('document').ready(function($){
 			$(this).parent().removeClass('expandable-open');		
 			$(this).removeClass('expandable-tab-active');
 			$('.expandable-shim').remove();
+			hideDetailView();
 		} else {
 			_gaq.push(['_trackEvent', 'Navigation', 'About Open']);
 			$(this).parent().addClass('expandable-open');
@@ -80,6 +84,7 @@ jQuery('document').ready(function($){
 		$('.expandable-open').removeClass('expandable-open');		
 		$('.expandable-tab-active').removeClass('expandable-tab-active');
 		$(this).remove();
+		hideDetailView();
 		return false;
 	});
 	
@@ -129,3 +134,42 @@ jQuery('document').ready(function($){
 	});
 	
 });
+
+function showDetailView(item) {
+		var nextItem, prevItem, visibleSiblingsAfter, visibleSiblingsBefore;
+		
+		// Figure out if already open
+		if (! $('.expandable-shim').length > 0) {
+			$('body').append('<div class="expandable-shim"></div>');	
+			$('.detail-view').show();
+		}
+		
+		// Update content in detail view
+		$('.detail-view').find('h2').html(item.attr('title'));	
+		
+		// Work out next and previous items
+		visibleSiblingsAfter = item.parent().nextAll('li').not('.isotope-hidden');
+		visibleSiblingsBefore = item.parent().prevAll('li').not('.isotope-hidden'); 
+		
+		// assign 'next' unless there are no more - in which case go round the back
+		nextItem = (visibleSiblingsAfter.length > 0) ? visibleSiblingsAfter.eq(0).find('a') : visibleSiblingsBefore.eq(-1).find('a') ;
+		
+		// assign 'prev' unless there are no more - in which case go round the back
+		prevItem = (visibleSiblingsBefore.length > 0) ? visibleSiblingsBefore.eq(0).find('a') : visibleSiblingsAfter.eq(-1).find('a');
+		
+		// Bind next and previous clicks
+		$('.detail-view').find('.next').unbind('click').click(function(){
+			showDetailView( nextItem );
+			return false;
+		});
+
+		$('.detail-view').find('.prev').unbind('click').click(function(){
+			showDetailView( prevItem );
+			return false;
+		});
+
+}
+
+function hideDetailView() {
+		$('.detail-view').hide();
+}

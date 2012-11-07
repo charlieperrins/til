@@ -32,6 +32,7 @@
 
 </head>
 <body>
+<?php if ($_SERVER['SERVER_ADDR'] != '127.0.0.1') : ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -40,6 +41,7 @@
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=375117879214862";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<?php endif; ?>
 
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
@@ -73,6 +75,8 @@
 			
 			<div class="clearfix">
 
+<?php if ($_SERVER['SERVER_ADDR'] != '127.0.0.1') : ?>
+
 				<div class="fb-like" data-href="http://www.theinspirationlist.com" data-send="false" data-layout="box_count" data-width="70" data-show-faces="false"></div>
 
 				<!-- AddThis Button BEGIN -->
@@ -82,6 +86,8 @@
 				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
 				<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4fda2882517c7e4f"></script>
 				<!-- AddThis Button END -->
+
+<?php endif; ?>
 			
 			</div>
 
