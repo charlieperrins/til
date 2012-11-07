@@ -43,6 +43,17 @@
 		
 	</div>
 
+	<div class="detail-view">
+		
+		<h2>DETAIL</h2>
+			
+		<div class="controls">
+			<a class="prev" href="#">Prev</a>
+			<a class="next" href="#">Next</a>
+		</div>
+
+	</div>
+	
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="<?=bloginfo('template_url');?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
